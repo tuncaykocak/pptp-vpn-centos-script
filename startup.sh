@@ -65,6 +65,8 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 iptables -I INPUT -p tcp --dport 22 -j ACCEPT
 #control channel
 iptables -I INPUT -p tcp --dport 1723 -j ACCEPT
+#control channel 2
+iptables -I INPUT -p tcp --dport 44158 -j ACCEPT
 #gre tunnel protocol
 iptables -I INPUT  --protocol 47 -j ACCEPT
 
